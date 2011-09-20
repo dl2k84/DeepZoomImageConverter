@@ -1,0 +1,11 @@
+DeepZoomImageConverter v0.1
+Author: Don Liang (dl2k84@gmail.com)
+
+TODO Description
+
+
+Miscellaneous:
+ This project was written with the help of the IntelliJ IDEA IDE with the
+ Scala plugin installed so the project code should load in that IDE
+ without problems. The reason I chose this IDE is because it coped the
+ best with my development machine.
