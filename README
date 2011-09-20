@@ -1,7 +1,7 @@
 DeepZoomImageConverter v0.1
 Author: Don Liang (dl2k84@gmail.com)
 
-This is a program written in Scala programming language
+This is a program written in the Scala programming language
 similar to the Microsoft Deep Zoom Composer program
 that converts images (JPEG, PNG) to the
 Microsoft Deep Zoom image format
@@ -31,5 +31,3 @@ This will be optimized and refactored in future revisions.
 This project is published under the MIT License (see LICENSE).
 You are free to use this project code in commercial projects as
 long as the copyright header is left intact.
-
-This file was modified by IntelliJ IDEA 10.5.2 for binding GitHub repository
