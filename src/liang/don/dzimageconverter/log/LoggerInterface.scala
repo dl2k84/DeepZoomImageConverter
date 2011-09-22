@@ -6,7 +6,7 @@ import liang.don.dzimageconverter.config.ConverterProperties
  * Logs information.
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 abstract class LoggerInterface {
 

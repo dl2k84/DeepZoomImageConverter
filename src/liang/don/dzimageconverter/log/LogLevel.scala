@@ -6,7 +6,7 @@ package liang.don.dzimageconverter.log
  * Fatal > Error > Info > Debug
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 object LogLevel extends Enumeration {
 

@@ -8,7 +8,7 @@ import liang.don.dzimageconverter.log.LogLevel
  * Contains settings related to the application.
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 object ConverterProperties {
 
@@ -25,7 +25,7 @@ object ConverterProperties {
   /**
    *
    * @author Don Liang
-   * @Version 0.0.1, 20/09/2011
+   * @Version 0.1, 22/09/2011
    */
   object BuildTarget {
     def Java = "java"
@@ -35,7 +35,7 @@ object ConverterProperties {
   /**
    *
    * @author Don Liang
-   * @Version 0.0.1, 20/09/2011
+   * @Version 0.1, 22/09/2011
    */
   object LogType {
     def Console = "Console"

@@ -15,10 +15,13 @@ Deep Zoom format, or my very own DeepZoomViewer
 
 If you have a Scala development environment set up with Java runtime support,
 the application can be started by invoking the main class with arguments:
-liang.don.dzimageconverter.ImageConverterMain ImageURL FileFormat
-where
-ImageURL is the location of the image and
-FileFormat is the format of the file (acceptable formats: jpg, png)
+liang.don.dzimageconverter.ImageConverterMain [ImageURL]
+where ImageURL is the location of the image.
+
+In future revisions, the ImageURL parameter is planned to support passing
+- An arbitrary list of URI(s)
+- A directory containing the images to convert.
+
 
 Alternatively, build a jar specifying the above class as the main class.
 

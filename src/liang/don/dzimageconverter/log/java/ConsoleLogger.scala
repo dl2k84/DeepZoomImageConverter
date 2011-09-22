@@ -8,7 +8,7 @@ import java.lang.StringBuffer
  * Java console logger.
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 trait ConsoleLogger extends LoggerInterface {
 

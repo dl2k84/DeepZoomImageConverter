@@ -4,7 +4,7 @@ package liang.don.dzimageconverter.format
  * PNG format definition with magic number.
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 object PngFormat extends ImageFormat {
 

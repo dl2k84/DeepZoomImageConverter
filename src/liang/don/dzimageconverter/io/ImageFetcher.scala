@@ -5,7 +5,7 @@ package liang.don.dzimageconverter.io
  * HTTP, HTTPS, or FILE protocol scheme.
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 abstract class ImageFetcher {
 
@@ -18,13 +18,6 @@ abstract class ImageFetcher {
    *          .NET(C#): System.Drawing.Bitmap<br>
    */
   def fetchImage(uri: String): AnyRef
-
-  /**
-   * Returns the image size as (width, height).
-   *
-   * @return The image size as (width, height)
-   */
-  def getImageSize(image: AnyRef): (Int, Int)
 
   /**
    * Writes the image to the target outputStream.

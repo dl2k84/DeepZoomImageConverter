@@ -6,18 +6,13 @@ import liang.don.dzimageconverter.io.ImageFetcher
  * Fetches an image using .Net(C#) specific API(s)
  *
  * @author Don Liang
- * @Version 0.0.1, 20/09/2011
+ * @Version 0.1, 22/09/2011
  */
 trait ImageFetcherNet extends ImageFetcher {
 
   override def fetchImage(uri: String): AnyRef = {
     // TODO
     sys.error("[" + getClass.getName + "#fetchImage] Not implemented.")
-  }
-
-  override def getImageSize(image: AnyRef): (Int, Int) = {
-    // TODO
-    sys.error("[" + getClass.getName + "#getImageSize] Not implemented.")
   }
 
   override def saveImage(image: AnyRef, fileFormat: String, outputStream: AnyRef) {
