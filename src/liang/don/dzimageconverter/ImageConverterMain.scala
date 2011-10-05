@@ -14,7 +14,7 @@ object ImageConverterMain {
       sys.exit()
     }
 
-    new ImageConverterImpl().convert(args(0))
+    new ImageConverterImpl().convert(args)
   }
 
   private def showHelp() {

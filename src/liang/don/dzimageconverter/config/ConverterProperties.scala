@@ -16,6 +16,7 @@ object ConverterProperties {
 
   private val BUILD_TARGET_KEY = "buildTarget"
   private val LOG_TYPE_KEY = "logType"
+  private val OUTPUT_TYPE_KEY = "outputType"
   private val OVERLAP_SIZE_KEY = "overlapSize"
   private val TILE_SIZE_KEY = "tileSize"
   private val MINIMUM_LOG_LEVEL_KEY = "minimumLogLevel"
@@ -42,6 +43,16 @@ object ConverterProperties {
     def File = "File"
   }
 
+  /**
+   *
+   * @author Don Liang
+   * @Version 0.2, 05/10/2011
+   */
+  object OutputType {
+    def Collection = "collection"
+    def Single = "single"
+  }
+
   def buildTarget: String = PROPERTIES.getProperty(BUILD_TARGET_KEY)
   def logType: String = PROPERTIES.getProperty(LOG_TYPE_KEY)
   def minimumLogLevel: LogLevel.Value = {
@@ -56,6 +67,7 @@ object ConverterProperties {
       LogLevel.Debug
     }
   }
+  def outputType: String = PROPERTIES.getProperty(OUTPUT_TYPE_KEY)
   def overlapSize: Int = PROPERTIES.getProperty(OVERLAP_SIZE_KEY).toInt
   def tileSize: Int = PROPERTIES.getProperty(TILE_SIZE_KEY).toInt
 

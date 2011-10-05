@@ -8,7 +8,8 @@ package liang.don.dzimageconverter.config
  */
 object FileProperties {
 
-  def baseDirectorySuffix: String = "_files"
+  def baseDirectory: String = "dzc_output_images"
   def collectionDescriptorFilename: String = "dzc_output.xml"
   def deepZoomNamespace: String = "http://schemas.microsoft.com/deepzoom/2009"
+  def imageBaseDirectorySuffix: String = "_files"
 }

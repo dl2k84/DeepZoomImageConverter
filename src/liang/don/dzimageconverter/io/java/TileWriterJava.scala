@@ -5,9 +5,9 @@ import java.lang.StringBuffer
 import liang.don.dzimageconverter.io.{TileFactory, TileWriter}
 import javax.imageio.ImageIO
 import java.io.{FileOutputStream, BufferedOutputStream, File}
-import liang.don.dzimageconverter.log.Logger
 import liang.don.dzimageconverter.format.PngFormat
 import liang.don.dzimageconverter.config.{FileProperties, ConverterProperties}
+import liang.don.dzimageconverter.log.{LogLevel, Logger}
 
 /**
  * Writes the converted Deep Zoom tiles using Java specific API(s).
@@ -22,7 +22,7 @@ trait TileWriterJava extends TileWriter {
   override def writeTile(image: AnyRef, column: Int, row: Int, fileFormat: String, originalFilename: String) {
     val sourceImage = image.asInstanceOf[BufferedImage]
     val zoomLevel = calculateMaximumZoomLevel(sourceImage.getWidth, sourceImage.getHeight)
-    val tile = tileReader.readTile(image, column, row, (if (PngFormat.FileFormat == fileFormat) true else false))
+    val tile = tileReader.readTile(image, column, row, (PngFormat.FileFormat == fileFormat))
 
     // N.B. Keeping the file extension when creating the generated base directory (unlike Microsoft Deep Zoom Composer).
     // This was decided so that files with the same name will generate different base directories which Deep Zoom Composer could not.
@@ -31,7 +31,7 @@ trait TileWriterJava extends TileWriter {
     //                 foo.png => foo.png_files
     // Deep Zoom Converter: foo.jpg => foo_files
     //                      foo.png => foo_files
-    val directoryName = originalFilename.substring(originalFilename.lastIndexOf("/") + 1) + FileProperties.baseDirectorySuffix + File.separator + zoomLevel
+    val directoryName = originalFilename.substring(originalFilename.lastIndexOf(File.separator) + 1) + FileProperties.imageBaseDirectorySuffix + File.separator + zoomLevel
 //    val directoryName = {
 //      val pathSeparatorIndex = originalFilename.lastIndexOf("/")
 //      val fileExtensionIndex = originalFilename.lastIndexOf(".")
@@ -52,7 +52,7 @@ trait TileWriterJava extends TileWriter {
     val filenameBuffer = new StringBuffer
     filenameBuffer.append(column).append("_").append(row).append(".").append(fileFormat)
 
-    val directory = new File(directoryName)
+    val directory = new File(FileProperties.baseDirectory + File.separator + directoryName)
     if (!directory.exists()) {
       directory.mkdirs()
     }
@@ -62,7 +62,7 @@ trait TileWriterJava extends TileWriter {
       file.createNewFile()
     }
 
-    Logger.instance.log("Writing tile: " + file.getAbsolutePath)
+    Logger.instance.log("[" + getClass.getName + "#writeTile] Writing tile: " + file.getAbsolutePath, LogLevel.Debug)
     ImageIO.write(tile.asInstanceOf[BufferedImage], fileFormat, new BufferedOutputStream(new FileOutputStream(file)))
   }
 
