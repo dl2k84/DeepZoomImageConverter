@@ -1,0 +1,6 @@
+DeepZoomImageConverter v0.2
+Author: Don Liang (dl2k84@gmail.com)
+
+Unit tests are written with the help of the
+ScalaTest (www.scalatest.org) framework
+with a BDD-like approach using the Spec trait.

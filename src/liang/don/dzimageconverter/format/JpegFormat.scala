@@ -8,7 +8,7 @@ package liang.don.dzimageconverter.format
  */
 object JpegFormat extends ImageFormat {
 
-  override def FileFormat: String = "jpg"
+  override def FileFormat: String = "jpg" // TODO handle jpeg extensions.
 
   override def MagicNumber: Array[Int] = Array[Int](0xff, 0xd8)
 

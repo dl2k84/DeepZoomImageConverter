@@ -1,10 +1,14 @@
 DeepZoomImageConverter Revision History
 Author: Don Liang (dl2k84@gmail.com)
 
+v0.2.1, 06/10/2011
+- First unit tests up. Experimenting with the ScalaTest (www.scalatest.org)
+  framework with a BDD-like approach to writing tests using the Spec trait.
+
 v0.2, 05/10/2011
 - Support conversion and output of image collections by accepting a folder
 path or accepting an ambiguous size of image paths in the program args.
 
 v0.1, 22/09/2011
-Initial working release.
+- Initial working release.
 See TODO file for list of functions yet to be implemented.

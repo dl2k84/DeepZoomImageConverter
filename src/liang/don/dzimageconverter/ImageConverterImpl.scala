@@ -6,7 +6,7 @@ import format.{PngFormat, JpegFormat}
 import io.TileFactory
 import java.io.{File, FilenameFilter}
 import collection.mutable.ArrayBuffer
-import log.{LogLevel, Logger}
+import log.Logger
 import xml.{Elem, XML}
 
 /**
